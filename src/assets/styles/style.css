@@ -8,7 +8,10 @@
     --purple-gradient: linear-gradient(-135deg, #8844EE, #B07DFB);
     --dark-purple: #8844EE;
     --light-purple: #B07DFB;
+    --dark-opacity: #2b213c65;
+    --dark-opacity-hover: #2b213c43;
     --light-gray: rgb(240, 240, 240);
+
 
     --dark-gradient: linear-gradient(-135deg, #1f152e, #2f1557);
     --dark-primary: #1f152e;
@@ -55,7 +58,7 @@ body{
     /*Definindo grid area dele dentro da estrutura criada acima*/
     grid-area: header;
 
-    background: var(--dark-gradient);
+    background: var(--purple-gradient);
     padding: 1.2rem;
 
     /*Definindo display grid para header*/
@@ -66,6 +69,36 @@ body{
 
 .header .logo{
     max-width: 10rem;
+}
+
+.header nav ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header nav a{
+    /*Display*/
+    display: block;
+
+    /*Font*/
+    font-size: 1.125rem;
+    color: var(--light-gray);
+    
+    /*Padding 4 Button*/
+    padding: .4rem 1.5rem;
+    background: var(--dark-opacity);
+    border-radius: 5px;
+
+    /*Transitions*/
+    transition: all .2s;
+}
+
+.header nav a:hover{
+    background: var(--dark-opacity-hover);
+}
+
+.header li + li{
+    margin-left: 30px;
 }
 
 .sidenav{
